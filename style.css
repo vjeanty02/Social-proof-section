@@ -1,29 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
 
-/*test*/
-.border
-{
-    border: 1px solid red;
-}
-  
-/*Color*/
-  
-:root 
-{
-  --color-primary: hsl(300, 43%, 22%); /*Very Dark Magenta*/
-  --color-secondary:  hsl(333, 80%, 67%); /*Soft Pink*/
-    
-  --color-neutral-dark: hsl(303, 10%, 53%); /*Dark Grayish Magenta*/
-  --color-neutral-light: hsl(300, 24%, 96%); /*Light Grayish Magenta*/
-  --color-neutral-white: hsl(0, 0%, 100%); /*White*/
-}
+/**
+ * 
+ * @author : vjeanty02
+ *
+ */
 
+
+
+/*=============================================
+=            general            =
+=============================================*/
 * 
 {
   margin: 0;
   padding: 0;
+  gap: 10px;
+  font-family: 'League Spartan', Courier, monospace;
 }
-      
+ 
 body 
 {
     display: flex;
@@ -33,3 +28,247 @@ body
     
     min-height: 100vh;
 }
+
+/*=====  End of general  ======*/
+
+/**
+ *
+ * 
+ *
+ */
+    
+/*=============================================
+=            Test            =
+=============================================*/
+.border
+{
+    border: 1px solid red;
+}
+/*=====  End of Test  ======*/
+
+/**
+ *
+ * 
+ *
+ */
+
+/*=============================================
+=            Colors            =
+=============================================*/ 
+:root 
+{
+  --color-primary: hsl(300, 43%, 22%); /*Very Dark Magenta*/
+  --color-secondary:  hsl(333, 80%, 67%); /*Soft Pink*/
+  --color-tertiairy: hsl(300, 24%, 96%); /*Light Grayish Magenta*/
+    
+  --color-neutral-dark: hsl(303, 10%, 53%); /*Dark Grayish Magenta*/
+  --color-neutral-light: hsl(300, 24%, 96%); /*Light Grayish Magenta*/
+  --color-neutral-white: hsl(0, 0%, 100%); /*White*/
+}
+/*=====  End of Colors  ======*/
+
+/**
+ *
+ * 
+ *
+ */
+
+/*=============================================
+=            display            =
+=============================================*/
+.flex
+{
+  display: flex;
+}
+.flex-center
+{
+  display: flex;
+  align-items: center;
+}
+.flex-al
+{
+  display: flex;
+  align-items: flex-start;
+}
+.flex-between
+{
+  display: flex;
+  justify-content:space-between;
+}
+.flex-around
+{
+  display: flex;
+  justify-content: space-around;
+}
+.flex-column
+{
+  display: flex;
+  flex-direction: column;
+}
+.flex-column-center
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-column-between
+{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+}
+
+.gap
+{
+  gap :7px;
+}
+.wrap
+{
+  flex-wrap: wrap;
+}
+/*=====  End of display  ======*/
+
+/**
+ *
+ * 
+ *
+ */
+
+ /*=============================================
+ =            Main            =
+ =============================================*/
+ 
+/*----------  card-social  ----------*/
+.page-social {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "page-social_section-heading page-social_section-rating"
+    "page-social_section-feedback page-social_section-feedback";
+
+  margin: 0px 180px;
+}
+
+/*----------  section Heading  ----------*/
+.page-social_section-heading {
+  align-self: start;
+  grid-area: page-social_section-heading;
+
+  padding-right: 90px;
+  gap: 60px;
+  
+}
+.page-social_heading
+{
+  color: var(--color-primary);
+  font-size: 55px;
+  line-height: 90%;
+}
+.page-social_p-heading
+{
+  color: var(--color-neutral-dark);
+  font-size: 18px;
+  line-height: 150%;
+  padding-top: 20px;
+  font-weight: 500;
+}
+
+/*----------  section Raiting  ----------*/
+.page-social_section-rating
+{
+  margin-top: 30px;
+  gap: 15px;
+}
+.page-social_container-raiting
+{
+  color: var(--color-primary);
+  background-color: var(--color-tertiairy);
+  border-radius: 8px;
+  padding: 20px;
+}
+.page-social_container-raiting h2
+{
+  font-size: 16px;
+}
+
+.page-social_container-raiting-1
+{
+  margin-right: 100px;
+}
+.page-social_container-raiting-2
+{
+  margin-right: 50px;
+  margin-left: 50px;
+}
+.page-social_container-raiting-3
+{
+  margin-left: 100px;
+}
+
+/*---------- section profile & feedback  ----------*/
+.page-social_section-feedback {
+  justify-self: stretch;
+  align-self: start;
+  grid-area: page-social_section-feedback;
+  
+  gap :30px;
+}
+.page-social_profile-feedback
+{
+  display: grid; 
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 10px;
+
+  padding: 40px 32px 35px 32px;
+  border-radius: 12px;
+  background-color: var(--color-primary);
+}
+.page-social_profil-img { 
+  grid-area: 1 / 1 / 2 / 2;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.page-social_profile-name { 
+  grid-area: 1 / 2 / 2 / 8; 
+
+  color: var(--color-neutral-light);
+  font-weight: 700;
+  padding-top: 5px;
+}
+.page-social_profile-name h3
+{
+  color: var(--color-secondary);
+  font-weight: 400;
+  font-size: 15px;
+  padding-top: 5px;
+}
+.page-social_feedback { 
+  grid-area: 2 / 1 / 4 / 8; 
+
+  line-height: 150%;
+  padding-top: 10px;
+  color: var(--color-neutral-light);
+}
+.page-social_profile-feedback-1
+{
+  margin-bottom: 52px;
+}
+.page-social_profile-feedback-2
+{
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+.page-social_profile-feedback-3
+{
+  margin-top: 52px;
+} 
+ /*=====  End of Main  ======*/
+ 
+ 
+
+
