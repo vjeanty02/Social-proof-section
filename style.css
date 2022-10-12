@@ -27,6 +27,7 @@ body
   align-items: center;
   justify-content:space-between;
     
+  background: url(images/bg-pattern-top-desktop.svg) left top no-repeat, url(images/bg-pattern-bottom-desktop.svg) bottom right no-repeat;
   min-height: 100vh;
 }
 
